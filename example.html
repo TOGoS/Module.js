@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Module.js example</title>
+</head>
+<html>
+<body>
+
+<p>Hi, if this example works, you should see some stupid alert box.</p>
+
+<script type="text/javascript" src="module.js"></script>
+
+<script type="text/javascript">//<![CDATA[
+	var qqq = module("togos.newproject.qqq");
+
+	qqq.Thang = function(iness) {
+		this.thanginess = iness;
+	}
+	qqq.Thang.prototype = {
+		"saySomething": function() {
+			alert("lawl, I have thanginess of "+this.thanginess);
+		}
+	}
+//]]></script>
+
+<!-- This script could be loaded from somewhere totally different -->
+<script type="text/javascript">//<![CDATA[
+	var qqq = module("togos.newproject.qqq");
+
+	// This would also work!
+	// var qqq = togos.newproject.qqq;
+
+	new qqq.Thang(17).saySomething();
+//]]></script>
+
+
+</body>
+</html>
