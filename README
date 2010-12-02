@@ -1,0 +1,35 @@
+= Module.js =
+
+A minimal module framework for JavaScript.
+
+I only call this a 'framework' because I have coworkers that don't think
+they can do a single thing without using some god forsaken 'framework'.
+
+Actually this is just a single function that makes it slightly easier to
+define namespaces in your JS code.
+
+== Usage ==
+
+Step 1. include module.js, either via a script tag, or directly in your
+javascript source.
+
+Step 2. Use the module(...) function to get the module object, either to
+define things in the module or to use them.
+
+== Usage Example ==
+
+var qqq = module("togos.newproject.qqq");
+
+
+qqq.Thang = function() {
+	this.thanginess = 5;
+}
+qqq.Thang.prototype = {
+	"saySomething": function() {
+		alert("lawl, I have thanginess of "+this.thangines);
+	}
+}
+
+== The end ==
+
+Thanks for watching.
